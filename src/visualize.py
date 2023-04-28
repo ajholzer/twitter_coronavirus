@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import matplotlib.pyplot as plt
+
 # command line args
 import argparse
 parser = argparse.ArgumentParser()
@@ -13,7 +14,7 @@ import os
 import json
 from collections import Counter,defaultdict
 import matplotlib
-import pandas as pd
+matplotlib.use('Agg')
 
 # open the input path
 with open(args.input_path) as f:
@@ -30,19 +31,16 @@ for k,v in items:
     print(k,':',v)
 
 #plot
-frequency = []
-hashtag = []
+topten = items[:10]
+keys, values = zip(*reversed(topten))
 
-for k,v in items:
-    hashtag.append(k)
-    frequency.append(v)
-df = pd.DataFrame(
-        {'Hashtag': hashtag,
-            'Frequency': frequency}
-        )
+fig, ax = plt.subplots()
+ax.barh(keys, values)
+ax.set_xlabel('Number of Tweets')
 
-df = df.sort_values('Frequency', ascending=True).tail(10)
-df.plot(kind='bar', x='Hashtag', y='Frequency', legend=False)
-plt.xlabel('')
-plt.ylabel('')
-plt.savefig(f"{args.key}country.png")
+if 'lang' in args.input_path:
+    ax.set_ylabel('Language')
+    fig.savefig(f'{args.key}_(lang).png')
+else:
+    ax.set_ylabel('Country')
+    fig.savefig(f'{args.key}_(country).png')
