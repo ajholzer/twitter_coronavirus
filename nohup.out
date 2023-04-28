@@ -1,0 +1,53 @@
+2023-04-26 17:44:59.744885 /data/Twitter dataset/geoTwitter20-08-18.zip geoTwitter20-08-18/geoTwitter20-08-18_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:45:02.083743 /data/Twitter dataset/geoTwitter20-07-16.zip geoTwitter20-07-16/geoTwitter20-07-16_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:44:59.943180 /data/Twitter dataset/geoTwitter20-07-12.zip geoTwitter20-07-12/geoTwitter20-07-12_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:45:02.041277 /data/Twitter dataset/geoTwitter20-07-28.zip geoTwitter20-07-28/geoTwitter20-07-28_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:45:00.629070 /data/Twitter dataset/geoTwitter20-05-29.zip geoTwitter20-05-29/geoTwitter20-05-29_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:45:03.663076 /data/Twitter dataset/geoTwitter20-06-02.zip geoTwitter20-06-02/geoTwitter20-06-02_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:45:06.368994 /data/Twitter dataset/geoTwitter20-07-14.zip geoTwitter20-07-14/geoTwitter20-07-14_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:45:06.568507 /data/Twitter dataset/geoTwitter20-09-05.zip geoTwitter20-09-05/geoTwitter20-09-05_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 73, in <module>
+    counter_country['_all'][country] += 1
+NameError: name 'country' is not defined
+2023-04-26 17:49:03.995425 /data/Twitter dataset/geoTwitter20-02-19.zip geoTwitter20-02-19/geoTwitter20-02-19_00:00
+Traceback (most recent call last):
+  File "./src/map.py", line 53, in <module>
+    for line in f:
+  File "/usr/lib/python3.6/zipfile.py", line 831, in readline
+    return io.BufferedIOBase.readline(self, limit)
+  File "/usr/lib/python3.6/zipfile.py", line 836, in peek
+    chunk = self.read(n)
+  File "/usr/lib/python3.6/zipfile.py", line 872, in read
+    data = self._read1(n)
+  File "/usr/lib/python3.6/zipfile.py", line 948, in _read1
+    data = self._decompressor.decompress(data, n)
+KeyboardInterrupt
