@@ -43,11 +43,11 @@ else:
 if args.percent:
     plt.ylabel('Percent of Total')
 else:
-    plt.ylabel('Tweet Volume')
+    plt.ylabel('Amount of Tweets')
 
 if args.input_path[-1] == 'g':
-    plt.savefig(args.key[1:] + '_lang.png')
-    print(args.key[1:] + '_lang.png')
+    plt.savefig(args.key[1:] + 'language.png')
+    print(args.key[1:] + 'language.png')
 else:
-    plt.savefig(args.key[1:] + '_country.png')
-    print(args.key[1:] + '_country.png')
+    plt.savefig(args.key[1:] + 'country.png')
+    print(args.key[1:] + 'country.png')
