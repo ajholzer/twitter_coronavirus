@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import matplotlib.pyplot as plt
 
 # command line args
 import argparse
@@ -15,6 +14,7 @@ import json
 from collections import Counter,defaultdict
 import matplotlib
 matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 # open the input path
 with open(args.input_path) as f:
@@ -33,14 +33,21 @@ for k,v in items:
 #plot
 topten = items[:10]
 keys, values = zip(*reversed(topten))
+plt.bar(range(len(keys)), values)
+plt.xticks(range(len(keys)), keys)
 
-fig, ax = plt.subplots()
-ax.barh(keys, values)
-ax.set_xlabel('Number of Tweets')
-
-if 'lang' in args.input_path:
-    ax.set_ylabel('Language')
-    fig.savefig(f'{args.key}_(lang).png')
+if args.input_path[-1] == 'g':
+    plt.xlabel('Language')
 else:
-    ax.set_ylabel('Country')
-    fig.savefig(f'{args.key}_(country).png')
+    plt.xlabel('Country')
+if args.percent:
+    plt.ylabel('Percent of Total')
+else:
+    plt.ylabel('Tweet Volume')
+
+if args.input_path[-1] == 'g':
+    plt.savefig(args.key[1:] + '_lang.png')
+    print(args.key[1:] + '_lang.png')
+else:
+    plt.savefig(args.key[1:] + '_country.png')
+    print(args.key[1:] + '_country.png')
